@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gameland - Reservations</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="jquery-ui.min.css">
+        <link rel="stylesheet" type="text/css" href="index.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+             <h3 class="top">Gameland - Home of Endless Games!</h3>
+                <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                        <ul class="nav navbar-nav">
+                            <li><a class="navig" href="#">About Us</a></li>
+                            <li class="active"><a class= "navig" href="reservations.html">Reservations</a></li>
+                            <li><a class="navig" href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </nav>
+        </header>
+        
+    
+        <div id="calendar">
+        </div>
+      
+  
+
+        
+        <script src="external/jquery/jquery.js"></script>
+        <script src="jquery-ui.min.js"></script>
+        <script>
+            $('#calendar').datepicker({
+                inline: true,
+                firstDay: 1,
+                showOtherMonths: true,
+                dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+                onSelect: null;
+            });
+        </script>
+        <script src="reservations.js"></script>
+    </body>
+</html>
