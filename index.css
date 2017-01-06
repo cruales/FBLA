@@ -82,3 +82,20 @@ div.second{
     margin-left: 15px;
     margin-right: 15px;
 }
+<<<<<<< Updated upstream
+=======
+footer{
+    text-align: center;
+    padding-top: 50px;
+    background-image: url(arcade%20door.jpg);
+    opacity: .7;
+    height: 100px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 8px;
+    margin-top: 25px;
+    color: white;
+}
+
+
+>>>>>>> Stashed changes
