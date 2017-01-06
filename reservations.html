@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    <div class="whole">
     <head>
         <title>Gameland - Reservations</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -23,10 +24,77 @@
                     </div>
                 </nav>
         </header>
-        
-    
-        <div id="calendar">
-        </div>
+        <div class="text-center second">
+        <div class="row">
+            <div class"col-xs-12">
+                <form class="input">
+                    <h6>First Name:<br></h6>
+                    <input id="reservation-first-name" type="text" name="firstname" value="">
+                    <br>
+                    <h6>Last Name:<br></h6>
+                    <input id="reservation-last-name" type="text" name="lastname" value="">
+                    <br>
+                    <h6>Email:<br></h6>
+                    <input id='reservation-email' type="text" name="email" value="">
+
+                </form> 
+            </div>
+            
+                <h6>Date:</h6>
+                <input type="text" id="calendar">
+                <h6>Select a package:</h6>
+                      <select>
+                        <option value="volvo">Gold Package</option>
+                        <option value="saab">Silver Package</option>
+                        <option value="opel">Bronze Package</option>
+                        <option value="opel">No Package</option>
+                      </select>
+
+                <br><br>
+                <button id="myBtn">Confirm</button>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p id="reservation-confirm">Thank you for making a reservation! We will email you a confirmation.</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <script>
+                // Get the modal
+                var modal = document.getElementById('myModal');
+
+                // Get the button that opens the modal
+                var btn = document.getElementById("myBtn");
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks the button, open the modal 
+                btn.onclick = function() {
+                    modal.style.display = "block";
+                }
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function() {
+            document.getElementById('reservation-last-name').value = "";
+            document.getElementById('reservation-first-name').value = "";
+            document.getElementById('reservation-email').value = "";
+            location.reload();
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            document.getElementById('reservation-last-name').value = "";
+            document.getElementById('reservation-first-name').value = "";
+            document.getElementById('reservation-email').value = "";
+            location.reload();
+            modal.style.display = "none";
+        }
+    }
+</script>
       
   
 
@@ -43,5 +111,9 @@
             });
         </script>
         <script src="reservations.js"></script>
+        <footer>
+                <p><b>Brought to you by Christie Ruales incorporated thanks to Bootstrap, w3Schools, and Google Images.</b> </p>
+        </footer>
     </body>
+    </div>
 </html>
