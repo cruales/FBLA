@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+  <html>
+  <title>Gameland</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="jquery-ui.min.css">
+  <style>
+      html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
+      .mySlides {display:none}
+      .w3-tag, .fa {cursor:pointer}
+      .w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+  </style>
+  <body>
+  
+  <!-- Links (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-row w3-large">
+      <div class="w3-col s3">
+        <a href="home.html" class="w3-btn-block w3-light-grey">Home</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="reserve.html" class="w3-btn-block w3-light-grey">Reservations</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="contactus.html" class="w3-btn-block w3-light-grey">Contact Us</a>
+      </div>
+    </div>
+  </div>
+  
+ <!-- Content -->
+ <div class="w3-content" style="max-width:1100px;margin-top:80px;margin-bottom:80px">
+ 
+   <div class="w3-panel">
+       <h1 style="font-family: 'Luckiest Guy', cursive">Gameland - Home of Endless Games!</h1>
+   </div>
+   </div>
+   
+   <!-- Grid -->
+   <div class="w3-row w3-container">
+ 
+   <!-- Grid -->
+ 
+   <!-- Grid -->
+   <div class="w3-row-padding" id="about">
+     <div class="w3-center w3-padding-64">
+       <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Who We Are</span>
+     </div>
+ 
+     <div class="w3-third w3-margin-bottom">
+       <div class="w3-card-4">
+         <img src="CEO.jpg" alt="John" style="width:100%;">
+         <div class="w3-container">
+           <h3>Christie Ruales</h3>
+           <p class="w3-opacity">CEO & Founder</p>
+           <p>Christie Ruales, at just 17, founded the company in 2016. Since then she has opened 3 branches in the United States. These locations include Florida, California, and Massachusetts. Her expertise in the field of computer science has allowed her to create the innnovative technology that makes Gameland so unique. Her vision for the company is to open branches in every state of the United States so that everyone, adults and kids alike, will have access to a fun and relaxing environment whenever they choose. </p>
+         </div>
+       </div>
+     </div>
+ 
+     <div class="w3-third w3-margin-bottom" style="width:66%">
+       <div class="w3-card-4">
+         <div class="w3-container">
+           <h3>Contact Us</h3>
+           <!--<p class="w3-opacity">Art Director</p>-->
+           <form class="w3-container" action="form.asp" target="_blank">
+     <div class="w3-group">
+       <label>Name</label>
+       <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Name" required>
+     </div>
+     <div class="w3-group">
+       <label>Email</label>
+       <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Email" required>
+     </div>
+     <div class="w3-group">
+       <label>Subject</label>
+       <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="Subject" required>
+     </div>
+     <div class="w3-group">
+       <label>Message</label>
+       <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="Message" required>
+     </div>
+   </form>
+              <button id="myBtn" class="w3-btn w3-btn-block w3-padding-12 sendcontact" >Send</button>
+     <div id="myModal" class="modal">
+                     <div class="modal-content">
+                         <span class="close">&times;</span>
+                         <p id="contact-confirm">Thank you for contacting us! We will get back to you as soon as possible!</p>
+                     </div>
+                 </div>
+         </div>
+       </div>
+     </div>
+       <script>
+                 // Get the modal
+                 var modal = document.getElementById('myModal');
+ 
+                 // Get the button that opens the modal
+                 var btn = document.getElementById("myBtn");
+ 
+                 // Get the <span> element that closes the modal
+                 var span = document.getElementsByClassName("close")[0];
+ 
+                 // When the user clicks the button, open the modal 
+                 btn.onclick = function() {
+                     modal.style.display = "block";
+                 }
+ 
+                 // When the user clicks on <span> (x), close the modal
+                 span.onclick = function() {
+             document.getElementById('contact-confirm').value="";
+             location.reload();
+         modal.style.display = "none";
+     }
+ 
+     // When the user clicks anywhere outside of the modal, close it
+     window.onclick = function(event) {
+         if (event.target == modal) {
+             document.getElementById('contact-confirm');
+             location.reload()="";
+             modal.style.display = "none";
+         }
+     }
+ </script>
+   </div>
+ 
+ </div>
+ 
+ <!-- Footer -->
+ 
+ <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
+   <a href="#" class="w3-btn w3-padding w3-black w3-margin"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+   <div class="w3-xlarge w3-section">
+     <i class="fa fa-facebook-official w3-hover-text-indigo"></i>
+     <i class="fa fa-instagram w3-hover-text-purple"></i>
+     <i class="fa fa-snapchat w3-hover-text-yellow"></i>
+     <i class="fa fa-pinterest-p w3-hover-text-red"></i>
+     <i class="fa fa-twitter w3-hover-text-light-blue"></i>
+     <i class="fa fa-linkedin w3-hover-text-indigo"></i>
+   </div>
+   <p>Powered by Christie Ruales Incorporated thanks to Bootstrap, w3Schools, and Google Images</p>
+ </footer>
+ 
+ </body>
+ </html>
